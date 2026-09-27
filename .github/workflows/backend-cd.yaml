@@ -124,8 +124,8 @@ jobs:
             --region us-east-1 \
             --name cluster
 
-      - name: Apply backend manifests
-        working-directory: starter/backend
+      - name: Apply backend Kubernetes manifests
+        working-directory: starter/backend/k8s
         run: |
           kubectl apply -k .
 
